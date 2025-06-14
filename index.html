@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Adda Zone Apps</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons (optional but recommended) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Basic Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* নতুন আকর্ষণীয় গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+            background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #1a202c;
+            font-weight: 700;
+            /* টেক্সটে হালকা শ্যাডো */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #4a5568;
+        }
+
+        /* App Grid Layout */
+        .app-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* উন্নত করা App Card (Glassmorphism Effect) */
+        .app-card {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 40px 35px;
+            width: 320px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .app-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.2);
+        }
+
+        .app-logo {
+            width: 100px; /* নির্দিষ্ট সাইজ দেওয়া হলো */
+            height: 100px;
+            object-fit: cover;
+            border-radius: 25%; /* লোগোকে একটু গোলাকার করা হলো */
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .app-title {
+            font-size: 1.7rem;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .app-description {
+            color: #636e72;
+            margin-bottom: 30px;
+            min-height: 40px; /* বিবরণীর জন্য জায়গা রাখা */
+        }
+
+        /* উন্নত করা Download Button */
+        .download-btn {
+            display: inline-flex; /* আইকন ও টেক্সটকে পাশাপাশি রাখতে */
+            align-items: center;
+            gap: 10px; /* আইকন ও টেক্সটের মাঝে স্পেস */
+            padding: 15px 35px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* বাটনের জন্য ভিন্ন ভিন্ন গ্রেডিয়েন্ট কালার */
+        .btn-blue {
+            background: linear-gradient(45deg, #0d6efd, #0056b3);
+        }
+
+        .btn-red {
+            background: linear-gradient(45deg, #dc3545, #c82333);
+        }
+        
+        /* নতুন যোগ করা তথ্যের জন্য স্টাইল */
+        .developer-info {
+            margin-top: 50px;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .developer-info p {
+            color: #4a5568;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .developer-info p:first-child {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+
+        footer {
+            margin-top: 40px; /* উপরের মার্জিন কমানো হলো */
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .app-card {
+                width: 100%;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Adda Zone Applications</h1>
+            <p>আপনার প্রয়োজনীয় অ্যাপস ডাউনলোড করুন এক ক্লিকে</p>
+        </header>
+
+        <main class="app-grid">
+            <!-- প্রথম অ্যাপ কার্ড -->
+            <div class="app-card">
+                <img src="logo_addazone_apk.png" alt="Adda Zone Apk Logo" class="app-logo">
+                <h2 class="app-title">Adda Zone Apk</h2>
+                <p class="app-description">আমাদের কমিউনিটিতে যোগ দিন এবং উপভোগ করুন সীমাহীন আড্ডা।</p>
+                <a href="https://drive.google.com/uc?export=download&id=1WKRwZEFNM1RJQ6dIa5KQAEcOGojqg_xk" class="download-btn btn-blue">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+
+            <!-- দ্বিতীয় অ্যাপ কার্ড -->
+            <div class="app-card">
+                <img src="logo_addazone_studio.png" alt="Adda Zone Studio Logo" class="app-logo">
+                <h2 class="app-title">Adda Zone Studio</h2>
+                <p class="app-description">আপনার সৃজনশীলতাকে প্রকাশ করুন আমাদের শক্তিশালী স্টুডিও অ্যাপ দিয়ে।</p>
+                <a href="https://drive.google.com/uc?export=download&id=1FKyAc7ILDCnM4v6XPG45zJhO3nVQ2no9" class="download-btn btn-red">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+        </main>
+
+        <!-- নতুন যোগ করা তথ্য -->
+        <div class="developer-info">
+            <p>এই এ্যাপ গুলো বাংলাদেশের একজন তৈরি করেছে, নাম: Md: Ridowan Fahim</p>
+            <p>এরকম এ্যাপ খুব কম মুল্যে বানায় নিতে যোগাযোগ করুন।</p>
+            <p><strong>Telegram Number:</strong> 01704027570</p>
+        </div>
+
+        <footer>
+            <p>© 2024 Adda Zone. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
