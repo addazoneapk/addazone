@@ -1,0 +1,1 @@
+Social App, Adda, Chat App, Facebook Alternative, Bengali Social Media, Lightweight Social, Text Based App, Friendship App, Adda Zone, Bangla Adda, Chat & Connect, Connect App, Personal Inbox, Status App
